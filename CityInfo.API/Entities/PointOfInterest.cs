@@ -1,10 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CityInfo.API.Models;
 
-namespace CityInfo.API.Entitites;
+namespace CityInfo.API.Entities;
 
-public class City
+public class PointOfInterest
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -16,11 +15,12 @@ public class City
     
     [MaxLength(200)]
     public string? Description { get; set; }
+    
+    [ForeignKey("CityId")]
+    public City? City { get; set; }
+    public int CityId { get; set; }
 
-    public ICollection<PointOfInterest> PointsOfInterest { get; set; }
-        = new List<PointOfInterest>();
-
-    public City(string name)
+    public PointOfInterest(string name)
     {
         Name = name;
     }

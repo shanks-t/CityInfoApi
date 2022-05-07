@@ -21,7 +21,7 @@ namespace CityInfo.API.Migrations
             migrationBuilder.InsertData(
                 table: "Cities",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 3, "The one with that big tower.", "Paris" });
+                values: new object[] { 3, "The one with that big tower.", "Nashville" });
 
             migrationBuilder.InsertData(
                 table: "PointsOfInterest",

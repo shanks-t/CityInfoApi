@@ -1,4 +1,4 @@
-using CityInfo.API.Entitites;
+using CityInfo.API.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CityInfo.API.DbContext;
@@ -27,7 +27,7 @@ public class CityInfoContext : Microsoft.EntityFrameworkCore.DbContext
                 Id = 2,
                 Description = "The one with the cathedral that was never really finished."
             },
-            new City("Paris")
+            new City("Nashville")
             {
                 Id = 3,
                 Description = "The one with that big tower."
